@@ -1,5 +1,6 @@
 package refactorme;
 import java.util.*;
+import java.util.Scanner;
 
 public class RefactorMe {
 
@@ -11,10 +12,13 @@ public class RefactorMe {
     }
 
     public static void getName(){
-        System.out.println("Your age is: ");
+        String name = "James";
+        System.out.println("Your name is: " + name);
     }
 
-    public static void calculateSalary(int income, int tax) {
+    public static void calculateSalary(int income, int tax){
+    int Salary = income - tax;
+        System.out.println("Your salary is: " + Salary);
         // Salary = income - tax
     }
 
@@ -28,15 +32,30 @@ public class RefactorMe {
         if (shape.contains("square")) {
             System.out.println("Your shape has 4 sides");
         }
+        if (shape.contains("circle")){
+            System.out.println("Your shape has 1 side");
+        }
+        if (shape.contains("hexagon")){
+            System.out.println("Your shape has 6 sides");
+        }
+        if (shape.contains("dodecagon")){
+            System.out.println("Your shape has 12 sides");
+        }
+        
     }
 
     public static void countLetters() {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Please enter a word: ");
+        String word = sc.next();
+        
+        
 
 
         //String word = 
         System.out.println("You entered: " + word );
 
-        System.out.println("You word is: " + word.length() + "letters long.");
+        System.out.println("You word is: " + word.length() + " letters long.");
     }
 
 }
